@@ -1,0 +1,110 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Grid</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="gridInterface">
+      <div id="sidePanel">
+        <div id="sidePanelHandle"><p id="handleArrow">></p></div>
+        <div class="panelSection">
+          <p class="algorithmSelectorText">Pathfinding algorithm:</p>
+          <div class="algorithmSelector" id="pathfinderSelector">
+            <p class="algorithmSelectedName" id="pathfindingSelectorText">
+              A Star
+            </p>
+            <button class="selectAlgorithmButton" id="selectPathfinderButton">
+              <p>></p>
+            </button>
+          </div>
+          <div class="algorithmList" id="pathfindList"></div>
+        </div>
+
+        <div class="panelSection">
+          <p class="algorithmSelectorText">Maze generation algorithm:</p>
+          <div class="algorithmSelector" id="mazeGenSelector">
+            <p class="algorithmSelectedName" id="mazeGenSelectorText">DFS</p>
+            <button class="selectAlgorithmButton" id="selectMazeGenButton">
+              <p>></p>
+            </button>
+          </div>
+          <div class="algorithmList" id="mazeGenList"></div>
+        </div>
+        <div class="panelSection">
+          <p id="visualizationText">Visualization</p>
+          <div id="visualizationToggle">
+            <div id="visualizationToggleBackground"></div>
+            <p class="visualizationToggleText">On</p>
+            <p class="visualizationToggleText">Off</p>
+          </div>
+        </div>
+      </div>
+      <div id="gridDiv">
+        <p id="dimensionsText">Grid size: --</p>
+        <canvas id="gridCanvas"></canvas>
+      </div>
+
+      <div id="buttonBar">
+        <div id="gridButtonsDiv">
+          <div class="gridButton" id="clearGridButton">
+            <p class="buttonTooltip">Clear grid</p>
+            <img
+              src="assets/clear_grid.png"
+              alt="clearGrid"
+              id="clearGridImg"
+            />
+          </div>
+          <div class="gridButton" id="squareBorderButton">
+            <p class="buttonTooltip">Borders ON/OFF</p>
+            <img
+              src="assets/border_img_1.png"
+              alt="toggleSquareBorder"
+              id="borderImg"
+            />
+          </div>
+          <div class="gridButton" id="visSpeedButton">
+            <p class="buttonTooltip">Visualization speed</p>
+            <img
+              src="assets/speed_control_1.png"
+              alt="visualizationSpeed"
+              id="speedControlImg"
+            />
+          </div>
+          <div class="gridButton" id="runPathfinderButton">
+            <p class="buttonTooltip">Find path</p>
+            <img
+              src="assets/pathfinder_button_1.svg"
+              alt="runPathfinder"
+              id="pathfinderImg"
+            />
+          </div>
+          <div class="gridButton" id="runMazeGenButton">
+            <p class="buttonTooltip">Generate maze</p>
+            <img
+              src="assets/maze_gen_button_1.svg"
+              alt="runMazeGen"
+              id="mazeGenImg"
+            />
+          </div>
+        </div>
+        <div id="sliderDiv">
+          <p class="sliderArrow" id="arrowUp">&#9650;</p>
+          <input
+            type="range"
+            name="rowsNumber"
+            id="sizeSlider"
+            min="30"
+            max="98"
+            value="50"
+            step="1"
+          />
+          <p class="sliderArrow" id="arrowDown">&#9650;</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="gui.js"></script>
+  </body>
+</html>
