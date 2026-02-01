@@ -46,7 +46,7 @@ body {
 }
 
 .gridButton:hover .buttonTooltip {
-  animation: tooltipAnimation 1s linear forwards;
+  animation: tooltipAnimation 0.4s linear forwards;
 }
 
 @keyframes tooltipAnimation {
@@ -341,3 +341,4 @@ body {
 #visualizationToggle:hover #visualizationToggleBackground {
   background-color: rgb(80, 80, 89);
 }
+
