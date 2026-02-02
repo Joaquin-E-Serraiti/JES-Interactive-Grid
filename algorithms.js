@@ -25,6 +25,7 @@ export const pathfinding = [
     {function: BFS,
         name: "BFS"},
     {function: wavesCollisions,
-        name: "Waves Collisions"},
+        name: "Collision Waves"},
+
 
 ]
