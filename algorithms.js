@@ -1,7 +1,7 @@
 import { secondContactBlocking } from "./Maze Generation/secondContactBlocking.js";
 import { aStarDiagonal } from "./Pathfinding/aStarDiagonal.js";
 import { aStarOrthogonal } from "./Pathfinding/aStarOrthogonal.js";
-import { wavesCollisions } from "./Pathfinding/wavesCollisions.js";
+import { collisionWaves } from "./Pathfinding/collisionWaves.js";
 import { generateDFSMaze } from "./Maze Generation/dfsMazeGeneration.js";
 import { primMazeGenerator } from "./Maze Generation/primMazeGeneration.js";
 import { BFS } from "./Pathfinding/bfsAlgorithm.js";
@@ -24,8 +24,9 @@ export const pathfinding = [
         name: "A Star (diagonal)"},
     {function: BFS,
         name: "BFS"},
-    {function: wavesCollisions,
+    {function: collisionWaves,
         name: "Collision Waves"},
 
 
 ]
+
