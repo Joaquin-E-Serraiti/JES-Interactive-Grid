@@ -162,7 +162,7 @@ async function collisionCycle(originPointsMap,maxId,grid) {
 }
 
 
-export async function wavesCollisions(grid) {
+export async function collisionWaves(grid) {
 
     const start = grid.startIndex;
     const end = grid.endIndex;
@@ -200,4 +200,5 @@ function colorOriginPoints(originPointsMap,grid) {
             grid.colorSquare(index,"rgb(154, 221, 255)")
         }
     }
+
 }
